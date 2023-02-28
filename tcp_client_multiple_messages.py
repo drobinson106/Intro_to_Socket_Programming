@@ -6,7 +6,7 @@ PORT = 65432  # The port used by the server
 #Creates a socket "s" that connects to the server then sends a user inputted "message"
 #"data" recieves the message from the server and prints it 
 #The message must be sent and recieved as bytes so .decode() is used to convert bytes(b) to string(str) and the reverse for .encode()
-#While loop used to keep the connection open until user inputs "end" which closes the connection
+#While loop used to keep the connection open allowing multiple messages to be sent until user inputs "end" which closes the connection
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 while True:
